@@ -68,38 +68,51 @@ HomeScreen
 
 ---
 
-##  Project Structure
+## 📁 Project Structure
+````md
 My_EasyFit/
-│
 ├── App.js
+├── package.json
+├── README.md
 ├── assets/
 │ ├── gym.jpg
 │ └── screenshots/
-│
-├── src/
-│ ├── core/constants/exercises.js
-│ ├── navigation/AppNavigator.js
-│ ├── features/
-│ │ ├── home/HomeScreen.js
-│ │ ├── beginnerExercises/BeginnerWorkoutScreen.js
-│ │ ├── bodyParts/BodyPartsScreen.js
-│ │ ├── exerciseList/ExerciseListScreen.js
-│ │ └── exerciseDetail/ExerciseDetailScreen.js
-│
-├── package.json
-└── README.md 
+└── src/
+├── core/constants/exercises.js
+├── navigation/AppNavigator.js
+└── features/
+├── home/HomeScreen.js
+├── beginnerExercises/BeginnerWorkoutScreen.js
+├── bodyParts/BodyPartsScreen.js
+├── exerciseList/ExerciseListScreen.js
+└── exerciseDetail/ExerciseDetailScreen.js
+
+````
 
 
----
 
-##  How to Run the App
+## ▶️ How to Run the App
 
-###  Install dependencies
+### 1️⃣ Install dependencies
 
 ```bash
 npm install
 
-Start Expo server
-npx expo start --tunnel
+````
+### Start Expo server
+```bash
+npm expo start --tunnel
+
+````
+### Run on device
+
+. Scan QR using Expo Go (Android)
+
+. or use iOS simulator
+
+## License
+
+This project is for educational purposes only.
+
 
 
