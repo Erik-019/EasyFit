@@ -1,0 +1,6 @@
+node_modules
+.git
+.firebase
+.expo
+.expo-shared
+npm-debug.log

@@ -28,6 +28,13 @@ export default function HomeScreen({ navigation }) {
           >
             <Text style={styles.secondaryButtonText}>Browse by Body Parts</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.secondaryButton}
+            onPress={() => navigation.navigate('Favorites')}
+          >
+            <Text style={styles.secondaryButtonText}>My Favorites</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ImageBackground>
