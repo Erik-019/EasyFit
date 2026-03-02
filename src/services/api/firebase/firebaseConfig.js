@@ -1,7 +1,9 @@
 import { getApp, getApps, initializeApp } from "firebase/app";
 
+const firebaseApiKey = process.env.EXPO_PUBLIC_FIREBASE_API_KEY;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDXJsyNm7R04WkEo_P4EcIRM4-z3Lp_4bo",
+  apiKey: firebaseApiKey,
   authDomain: "easyfit-edd8e.firebaseapp.com",
   projectId: "easyfit-edd8e",
   storageBucket: "easyfit-edd8e.firebasestorage.app",
@@ -10,8 +12,8 @@ const firebaseConfig = {
   measurementId: "G-XLKRP1BYJC"
 };
 
-if (!firebaseConfig.apiKey || firebaseConfig.apiKey.includes("...")) {
-  throw new Error("Firebase apiKey is not set correctly. Replace placeholder apiKey in firebaseConfig.js.");
+if (!firebaseConfig.apiKey) {
+  throw new Error("Firebase apiKey is missing. Set EXPO_PUBLIC_FIREBASE_API_KEY in your .env file.");
 }
 
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
