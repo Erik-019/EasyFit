@@ -1,0 +1,49 @@
+# Environment files (keep .env.local if you have it locally)
+.env.*.local
+.env.local
+
+# Dependencies (will be reinstalled on EAS)
+node_modules/
+
+# Expo and build caches
+.expo/
+dist/
+web-build/
+.eas/
+
+# Firebase
+.firebase/
+.firebaserc
+
+# IDE and OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Build artifacts and temporary files
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+*.pem
+
+# Hide large binary files if you have them
+*.mp4
+*.mkv
+*.zip
+*.tar.gz
