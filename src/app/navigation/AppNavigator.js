@@ -3,15 +3,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Pressable, Text, View } from 'react-native';
 
-import HomeScreen from '../../features/home/HomeScreen';
-import BeginnerExercisesScreen from '../../features/beginnerExercises/BeginnerExercisesScreen';
-import BodyPartsScreen from '../../features/bodyParts/BodyPartsScreen';
-import ExerciseListScreen from '../../features/exerciseList/ExerciseListScreen';
-import ExerciseDetailScreen from '../../features/exerciseDetail/ExerciseDetailScreen';
-import LoginScreen from '../../features/auth/LoginScreen';
-import FavoritesScreen from '../../features/favorites/FavoritesScreen';
-import { COLORS } from '../constants/theme';
-import { listenAuthState, logoutUser } from '../../services/api/firebase/authService';
+import HomeScreen from '../../screens/HomeScreen';
+import BeginnerExercisesScreen from '../../screens/BeginnerExercisesScreen';
+import BodyPartsScreen from '../../screens/BodyPartsScreen';
+import ExerciseListScreen from '../../screens/ExerciseListScreen';
+import ExerciseDetailScreen from '../../screens/ExerciseDetailScreen';
+import LoginScreen from '../../screens/LoginScreen';
+import FavoritesScreen from '../../screens/FavoritesScreen';
+import { COLORS } from '../../shared/theme';
+import { listenAuthState, logoutUser } from '../../services/firebase/authService';
 
 const Stack = createNativeStackNavigator();
 

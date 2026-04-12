@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ImageBackground, StyleSheet } from 'react-native';
-import { COLORS, SPACING, BORDER_RADIUS } from '../../core/constants/theme';
+import { COLORS, SPACING, BORDER_RADIUS } from '../shared/theme';
 
 export default function HomeScreen({ navigation }) {
   return (
     <ImageBackground
-      source={require('../../../assets/gym.jpg')}
+      source={require('../../assets/gym.jpg')}
       style={styles.background}
       resizeMode="cover"
       blurRadius={3}

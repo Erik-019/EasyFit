@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
-import { loginWithEmail, requestPasswordReset, signupWithEmail } from '../../services/api/firebase/authService';
-import { COLORS, SPACING, BORDER_RADIUS } from '../../core/constants/theme';
+import { loginWithEmail, requestPasswordReset, signupWithEmail } from '../services/firebase/authService';
+import { COLORS, SPACING, BORDER_RADIUS } from '../shared/theme';
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');

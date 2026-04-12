@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
-import { bodyParts } from '../../core/constants/exercises';
-import { COLORS, SPACING, BORDER_RADIUS } from '../../core/constants/theme';
+import { bodyParts } from '../data/exercises';
+import { COLORS, SPACING, BORDER_RADIUS } from '../shared/theme';
 
 export default function BodyPartsScreen({ navigation }) {
   return (

@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { exercises } from '../../core/constants/exercises';
-import { COLORS, SPACING, BORDER_RADIUS } from '../../core/constants/theme';
-import { getCurrentUser } from '../../services/api/firebase/authService';
-import { getFavoriteExerciseIds, removeFavorite } from '../../services/api/firebase/favoritesService';
+import { exercises } from '../data/exercises';
+import { COLORS, SPACING, BORDER_RADIUS } from '../shared/theme';
+import { getCurrentUser } from '../services/firebase/authService';
+import { getFavoriteExerciseIds, removeFavorite } from '../services/firebase/favoritesService';
 
 export default function FavoritesScreen({ navigation }) {
 	const [loading, setLoading] = useState(true);

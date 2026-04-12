@@ -1,15 +1,17 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
-import { getBeginnerExercises } from '../../core/constants/exercises';
-import { COLORS, SPACING, BORDER_RADIUS } from '../../core/constants/theme';
+import { bodyParts, getExercisesByBodyPart } from '../data/exercises';
+import { COLORS, SPACING, BORDER_RADIUS } from '../shared/theme';
 
-export default function BeginnerExercisesScreen({ navigation }) {
-  const beginnerExercises = getBeginnerExercises();
+export default function ExerciseListScreen({ navigation, route }) {
+  const { bodyPart } = route.params || {};
+  const exercises = bodyPart ? getExercisesByBodyPart(bodyPart) : [];
+  const partName = bodyParts.find((part) => part.id === bodyPart)?.name || 'Exercises';
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Beginner Workout</Text>
-      {beginnerExercises.map((exercise) => (
+      <Text style={styles.title}>{partName} Exercises</Text>
+      {exercises.map((exercise) => (
         <TouchableOpacity
           key={exercise.id}
           style={styles.card}
@@ -19,6 +21,11 @@ export default function BeginnerExercisesScreen({ navigation }) {
           <Text style={styles.cardChevron}>View</Text>
         </TouchableOpacity>
       ))}
+      {!exercises.length && (
+        <View style={styles.emptyState}>
+          <Text style={styles.emptyText}>No exercises found.</Text>
+        </View>
+      )}
     </ScrollView>
   );
 }
@@ -56,5 +63,13 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     fontSize: 14,
     fontWeight: '700',
+  },
+  emptyState: {
+    paddingVertical: SPACING.xl,
+    alignItems: 'center',
+  },
+  emptyText: {
+    color: COLORS.textSecondary,
+    fontSize: 16,
   },
 });

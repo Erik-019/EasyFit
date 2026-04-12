@@ -5,10 +5,16 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
+    "android": {
+      "package": "com.erikkhun.easyfit"
     },
-    "android": {}
+    "extra": {
+      "eas": {
+        "projectId": "26c1f2e3-70fe-4709-b364-b7f8b462a901"
+      }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }

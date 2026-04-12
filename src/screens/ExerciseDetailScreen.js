@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Linking, ActivityIndicator } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { getExerciseById } from '../../core/constants/exercises';
-import { COLORS, SPACING, BORDER_RADIUS } from '../../core/constants/theme';
-import { getCurrentUser } from '../../services/api/firebase/authService';
-import { addFavorite, isFavorite, removeFavorite } from '../../services/api/firebase/favoritesService';
+import { getExerciseById } from '../data/exercises';
+import { COLORS, SPACING, BORDER_RADIUS } from '../shared/theme';
+import { getCurrentUser } from '../services/firebase/authService';
+import { addFavorite, isFavorite, removeFavorite } from '../services/firebase/favoritesService';
 
 export default function ExerciseDetailScreen({ route }) {
   const { id } = route.params || {};

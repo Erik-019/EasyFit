@@ -2,15 +2,22 @@
 
 # dependencies
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Expo
 .expo/
+.expo-shared/
 dist/
 web-build/
+.vercel/
 
 # Firebase
 .firebase/
 .firebaserc
+firebase-debug.log*
 
 # Native
 *.orig.*
@@ -19,19 +26,45 @@ web-build/
 *.p12
 *.key
 *.mobileprovision
+*.keystore
+
+# Native build outputs (generated)
+android/.gradle/
+android/app/build/
+android/build/
+ios/build/
+ios/Pods/
+
+# Keep android/ios folders tracked if intentionally committed
+!android/.gitkeep
+!ios/.gitkeep
 
 # Metro
 .metro-health-check*
 
 # debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+*.log
+coverage/
 
 # macOS
 .DS_Store
 *.pem
 
+# Windows
+Thumbs.db
+Desktop.ini
+
 # local env files
 .env
+.env.*
 .env*.local
+!.env.example
+
+# local secret notes
+keystore-data.md
+
+# IDE and editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
